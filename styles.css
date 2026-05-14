@@ -12,7 +12,7 @@ html, body {
 }
 
 .container {
-    margin: 20px auto; 
+    margin: 0px auto; 
     width: 90vw;
     height: 90vw;
     max-width: 700px; 

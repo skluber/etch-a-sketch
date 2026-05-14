@@ -6,6 +6,7 @@ function createGrid (size) {
     container.id = "container";
     container.className = "container";
     document.body.appendChild(container);
+    let opacity = 100;
 
     for (let j = 0; j < size*size; j++) {
         const cell = document.createElement("div");
@@ -16,10 +17,17 @@ function createGrid (size) {
 
     container.addEventListener('mouseover', (event) => {
         if (event.target.classList.contains("cell")) {
-            event.target.style.backgroundColor = "black";
+            if (opacity < 10) opacity = 100
+            event.target.style.backgroundColor = randomRGB();
+            event.target.style.opacity = `${opacity}%`;
+            opacity -= 10;
         }
     })  
 
+}
+
+function randomRGB() {
+    return `rgb(${Math.floor(Math.random() * 255 + 1)}, ${Math.floor(Math.random() * 255 + 1)}, ${Math.floor(Math.random() * 255 + 1)})`
 }
 
 function removeGrid() {
