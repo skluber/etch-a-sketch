@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90vw;
+    height: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cell {
+    box-sizing: border-box;
+    width: calc(100% / 16);
+    aspect-ratio: 1 / 1;
+    background-color: red;
+    border: 2px solid black;
+}
